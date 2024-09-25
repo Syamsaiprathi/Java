@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class SyamSai {
+    public static void main(String[] args) {
+        int a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of rows:");
+        a = sc.nextInt();
+        System.out.println("Enter number of columns:");
+        b = sc.nextInt();
+        int[][] c = new int[a][b];
+        System.out.println("Enter numbers in array:");
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j < b; j++) {
+                c[i][j]=sc.nextInt();
+            }
+        }
+        int[] d=new int[a];
+        for (int i = 0; i < a; i++) {
+            int temp=0;
+            for (int j = 0; j < b; j++) {
+                if(temp<=c[i][j]){
+                    temp=c[i][j];
+                }else
+                    continue;
+            }
+            d[i]=temp;
+        }
+        System.out.println("Highest element in each row of array:");
+        for(int i=0;i<a;i++){
+            System.out.print(d[i]+" ");
+        }
+
+        }
+    }
+
