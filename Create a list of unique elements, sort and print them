@@ -1,0 +1,23 @@
+import java.util.*;
+
+
+public class SyamSai {
+    public static void main(String[] args) {
+        int a,t=0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter no of integers: ");
+        a=sc.nextInt();
+        ArrayList<Integer> c=new ArrayList<>();
+        for(int i=0;i<a;i++) {
+            t = sc.nextInt();
+            if (!c.contains(t))
+                c.add(t);
+        }
+        Collections.sort(c);
+        System.out.println("Final unique integers are: ");
+        for(Integer x : c)
+            System.out.print(x+" ");
+
+    }
+}
+
